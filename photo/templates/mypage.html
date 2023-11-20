@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Mygame{% endblock %}
+        {% block contents %}
+        {% if user.is_authenticated %}
+        <br>
+        <div style="text-align: center">
+        <h4>{{user.username}}さんのマイページ</h4>
+        {% if object_list.count == 0 %}
+            <p></p>
+    </div>
